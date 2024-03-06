@@ -1,15 +1,12 @@
 package rng
 
 import (
-	"math/rand"
 	"strings"
-	"time"
 
 	"github.com/docker/docker/pkg/namesgenerator"
 )
 
 func NewDocker() string {
-	rand.Seed(time.Now().UnixNano())
 	return namesgenerator.GetRandomName(0)
 }
 
